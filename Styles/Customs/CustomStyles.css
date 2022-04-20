@@ -1,0 +1,223 @@
+body {
+    /* padding-top: 88px;
+    padding-bottom: 70px; */
+    font-family: 'Garamond';
+    font-size: 120%;
+}
+ul.noBullets {
+    list-style-type: none;
+}
+.customFooter-60 {
+    width:60% !important; 
+    float:left !important;
+}
+.customFooter-40 {
+    width:40% !important; 
+    float:left !important;
+}
+.customWrap {
+    min-height: 100%;
+}
+.text-right {
+    text-align:right;
+    /* padding-right: 1em; */
+}
+.text-left {
+    text-align:left;
+    /* padding-left: 1em; */
+}
+
+h2 {
+    color:#4d627f;
+}
+
+h3 {
+    color:#394660;
+}
+h3 > a{
+    color:#394660;
+}
+
+/* Table */
+table {
+    text-align: center;
+    width: 100%;
+    border: solid black 1px;
+
+    background-color: #fafdff;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: none;
+    box-sizing: inherit;
+    color: black;
+    /* font-family: Merriweather, Arial, sans-serif; */
+    font-size: 15px;
+    margin: 0px 0px 2.5rem;
+}
+
+table th {
+    background-color: #4d627f;
+    border: 1px solid rgb(207, 215, 224);
+    box-sizing: inherit;
+    color: #fafdff;
+    /* font-family: Lato; */
+    margin: 0px;
+    padding: 0.3em 0.5em;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: central;
+}
+
+table td {
+    border: 1px solid rgb(207, 215, 224);
+    box-sizing: inherit;
+    color: #1f3656;
+    /* font-size: 14px; */
+    margin: 0px;
+    padding: 0.3em 0.5em;
+    vertical-align: central;
+}
+
+/* To looks like a link */
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor */
+/* https://codepen.io/jstn/pen/zuDst */
+.span-link{
+    cursor: pointer;
+
+    /* padding: 15px 20px; */
+    /* letter-spacing: 0.15em; */
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.span-link:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.span-link:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+.link-type {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    border-bottom: black 1px solid;
+}
+/* a::before{
+    content: "<i class='bi bi-link-45deg' style='font-size: 2rem; color: cornflowerblue;'></i>"
+} */
+.onlyPrint {
+    display:none !important;
+}
+/*Printing*/
+@media print{
+    body {
+        /* padding-top: 88px;
+        padding-bottom: 70px; */
+        font-family: 'Garamond';
+        font-size: 105%;
+    }
+    header, footer {display: none;}
+    #PageRender{
+        overflow-y: auto;
+        height: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    #printPDF, .hiddenPrintPDF{
+        display: none;
+    }
+    .col-xs-8 {
+        width: 60%;
+    }
+    /* .col-xs-4 {
+        width: 40%;
+    } */
+    .col-xs-4{
+        width: 33%;
+    }
+    .bi{
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    /* https://stackoverflow.com/questions/9140585/hr-not-seen-when-printing */
+    hr {
+        display: block;
+        height: 1px;
+        background: transparent;
+        width: 100%;
+        border: none;
+        border-top: solid 1px #aaa;
+    }
+
+    /* Table */
+    table {
+        text-align: center;
+        width: 100%;
+        border: solid black 1px;
+
+        background-color: #fafdff;
+        border-collapse: collapse;
+        border-spacing: 0px;
+        border: none;
+        box-sizing: inherit;
+        color: black;
+        /* font-family: Merriweather, Arial, sans-serif; */
+        font-size: 15px;
+        margin: 0px 0px 2.5rem;
+        -webkit-print-color-adjust: exact; 
+    }
+
+    table th {
+        background-color: #4d627f;
+        border: 1px solid rgb(207, 215, 224);
+        box-sizing: inherit;
+        color: #fafdff;
+        /* font-family: Lato; */
+        margin: 0px;
+        padding: 0.3em 0.5em;
+        text-align: center;
+        text-transform: capitalize;
+        vertical-align: central;
+        -webkit-print-color-adjust: exact; 
+    }
+
+    table td {
+        border: 1px solid rgb(207, 215, 224);
+        box-sizing: inherit;
+        color: #1f3656;
+        /* font-size: 14px; */
+        margin: 0px;
+        padding: 0.3em 0.5em;
+        vertical-align: central;
+        -webkit-print-color-adjust: exact; 
+    }
+    .card-header {
+        -webkit-print-color-adjust: exact; 
+    }
+    .onlyPrint {
+        display:block !important;
+        
+    }
+}
+/* @font-face {
+    font-family: customFont;
+    src: url(path.woff);
+  } */
+  

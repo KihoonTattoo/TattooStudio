@@ -1,0 +1,23 @@
+img#Avatar {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  
+}
+img#QR {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+#PageRender{
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: 88px;
+    padding-bottom: 70px;
+}
