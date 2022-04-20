@@ -12,7 +12,7 @@ function PathBuilder(el, path) {
 //FirstLoad
 document.addEventListener('DOMContentLoaded', function () {
     InternalRequest(document.querySelector("header>[data-content='true']"), 'Section');
-    MenuRequest('_main');
+    MenuRequest('main');
     InternalRequest(document.querySelector("footer[data-content='true']"), 'Section');
 
 })
@@ -33,7 +33,7 @@ async function MenuRequest(section) {
 /* PageRender */
 function DataSectionRequest(internalContent) {
     switch (internalContent.getAttribute("data-section")) {
-        case '_main':
+        case 'main':
             MainRequest();
             break;
         case 'Introduction':
@@ -97,12 +97,12 @@ function GetJsonData(data) {
 
 }
 
-/* _main */
+/* home */
 async function MainRequest() {
     var contentList = document.querySelectorAll(".container > [data-content='true']");
     contentList.forEach(
         function (e) {
-            fetch(PathBuilder(e, 'View/_main'))
+            fetch(PathBuilder(e, 'View/home'))
                 .then(response => {
                     return response.text();
                 })
